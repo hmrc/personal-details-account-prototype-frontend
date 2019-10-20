@@ -1,13 +1,33 @@
 # microservice specific routes
 
-GET        /                                            controllers.IndexController.onPageLoad
+GET        /                                    controllers.IndexController.onPageLoad
 
-GET        /assets/*file                                controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file                        controllers.Assets.versioned(path="/public", file: Asset)
 
-GET        /language/:lang                              controllers.LanguageSwitchController.switchToLanguage(lang: String)
+GET        /language/:lang                      controllers.LanguageSwitchController.switchToLanguage(lang: String)
 
-GET        /this-service-has-been-reset                 controllers.SessionExpiredController.onPageLoad
+GET        /this-service-has-been-reset         controllers.SessionExpiredController.onPageLoad
 
-GET        /check-your-answers                          controllers.CheckYourAnswersController.onPageLoad
+GET        /check-your-answers                  controllers.CheckYourAnswersController.onPageLoad
 
-GET        /unauthorised                                controllers.UnauthorisedController.onPageLoad
+GET        /address                             controllers.AddressController.onPageLoad(mode: Mode = NormalMode)
+POST       /address                             controllers.AddressController.onSubmit(mode: Mode = NormalMode)
+GET        /change-address                      controllers.AddressController.onPageLoad(mode: Mode = CheckMode)
+POST       /change-address                      controllers.AddressController.onSubmit(mode: Mode = CheckMode)
+
+GET        /application-complete                controllers.ApplicationCompleteController.onPageLoad()
+
+GET        /contact-preference                  controllers.ContactPreferenceController.onPageLoad(mode: Mode = NormalMode)
+POST       /contact-preference                  controllers.ContactPreferenceController.onSubmit(mode: Mode = NormalMode)
+GET        /change-contact-preference           controllers.ContactPreferenceController.onPageLoad(mode: Mode = CheckMode)
+POST       /change-contact-preference           controllers.ContactPreferenceController.onSubmit(mode: Mode = CheckMode)
+
+GET        /name                                controllers.NameController.onPageLoad(mode: Mode = NormalMode)
+POST       /name                                controllers.NameController.onSubmit(mode: Mode = NormalMode)
+GET        /change-name                         controllers.NameController.onPageLoad(mode: Mode = CheckMode)
+POST       /change-name                         controllers.NameController.onSubmit(mode: Mode = CheckMode)
+
+GET        /phone-number                        controllers.PhoneNumberController.onPageLoad(mode: Mode = NormalMode)
+POST       /phone-number                        controllers.PhoneNumberController.onSubmit(mode: Mode = NormalMode)
+GET        /change-phone-number                 controllers.PhoneNumberController.onPageLoad(mode: Mode = CheckMode)
+POST       /change-phone-number                 controllers.PhoneNumberController.onSubmit(mode: Mode = CheckMode)
