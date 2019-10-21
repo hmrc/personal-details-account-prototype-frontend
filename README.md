@@ -1,17 +1,25 @@
+# Personal Details Account  prototype
+>  Skeleton project for usability testing of [Twirl](https://github.com/hmrc/play-frontend-govuk) and [Nunjucks](https://github.com/hmrc/play-nunjucks-spike) UI libraries
 
-# Personal Details Account using [Twirl](https://github.com/hmrc/play-frontend-govuk) library
+## Table of Contents
 
-## Getting started
+- [Using Twirl library](#using-twirl-library)
+- [Using Nunjucks library](#using-nunjucks-library)
+
+
+# Using Twirl library
+
+### Getting started
 1>  Add [Twirl](https://github.com/hmrc/play-frontend-govuk/releases) library in the App dependencies. Tested version: 
 ```scala
 "uk.gov.hmrc"       %% "play-frontend-govuk"            % "0.5.0-play-26"
 ```
 2>  Add SASS assets to app/assets/stylesheets.  
-3>  Add govuk-frontend routing redirection in app.routes
+3>  Add govuk-frontend routing redirection in app.routes:
 ```scala
 ->         /govuk-frontend                      govuk.Routes
 ```
-4>  Add TwirlKeys.templateImports in build.sbt
+4>  Add TwirlKeys.templateImports in build.sbt:
 ```sbt
     TwirlKeys.templateImports ++= Seq(
       "uk.gov.hmrc.govukfrontend.views.html.components._",
@@ -25,16 +33,16 @@ resolvers += “hmrc-releases” at “https://artefacts.tax.service.gov.uk/arti
 6>  See more tips [here](https://github.com/hmrc/play-frontend-govuk#getting-started)
 
 
-## Potential gotchas 
+### Potential gotchas 
 1. Haven't tested a way to get value back from session and set on forms when revisiting them
 2. Haven't tested a way to get value back from session and set on summary page  
 <br/>   
 <br/>   
 <hr/>   
    
-# Personal Details Account using [Nunjucks](https://github.com/hmrc/play-nunjucks-spike) lib
+# Using Nunjucks library
 
-## Getting started 
+### Getting started 
 
 1>  Add [Nunjucks](https://github.com/hmrc/play-nunjucks-spike/releases) library and required webjars in the App dependencies:
 ```sbt
@@ -58,5 +66,5 @@ nunjucks {
     <logger name="org.webjars" level="INFO"/>
 ```
 
-## Potential gotchas 
+### Potential gotchas 
 1. Mode deserialiser may need to be added if missing 
