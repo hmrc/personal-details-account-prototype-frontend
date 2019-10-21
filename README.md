@@ -26,11 +26,7 @@
       "uk.gov.hmrc.govukfrontend.views.html.helpers._"
     )
 ```
-5>  Use private library resolver:
-```scala
-resolvers += “hmrc-releases” at “https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases/”
-```
-6>  See more tips [here](https://github.com/hmrc/play-frontend-govuk#getting-started)
+5>  See more tips [here](https://github.com/hmrc/play-frontend-govuk#getting-started)
 
 
 ### Potential gotchas 

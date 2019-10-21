@@ -38,6 +38,7 @@ lazy val root = (project in file("."))
       Resolver.bintrayRepo("hmrc", "releases"),
       Resolver.jcenterRepo
     ),
+    resolvers += "hmrc-releases" at "https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases",
     // concatenate js
     Concat.groups := Seq(
       "javascripts/personaldetailsaccountprototypefrontend-app.js" ->
