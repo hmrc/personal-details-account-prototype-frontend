@@ -59,4 +59,4 @@ nunjucks {
 ```
 
 ## Potential gotchas 
-2. Mode deserialiser may need to be added if missing 
+1. Mode deserialiser may need to be added if missing 
