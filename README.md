@@ -2,11 +2,11 @@
 # Personal Details Account using [Twirl](https://github.com/hmrc/play-frontend-govuk) library
 
 ## Getting started
-1>  Add [Twirl](https://github.com/hmrc/play-frontend-govuk) library in the App dependencies. Tested version: 
+1>  Add [Twirl](https://github.com/hmrc/play-frontend-govuk/releases) library in the App dependencies. Tested version: 
 ```scala
 "uk.gov.hmrc"       %% "play-frontend-govuk"            % "0.5.0-play-26"
 ```
-2>  Add SASS assets to app/assets/stylesheets. <br/>
+2>  Add SASS assets to app/assets/stylesheets.  
 3>  Add govuk-frontend routing redirection in app.routes
 ```scala
 ->         /govuk-frontend                      govuk.Routes
@@ -27,20 +27,22 @@ resolvers += “hmrc-releases” at “https://artefacts.tax.service.gov.uk/arti
 
 ## Potential gotchas 
 1. Haven't tested a way to get value back from session and set on forms when revisiting them
-2. Haven't tested a way to get value back from session and set on summary page
-
-
-# Personal Details Account using Nunjucks lib
+2. Haven't tested a way to get value back from session and set on summary page  
+<br/>   
+<br/>   
+<hr/>   
+   
+# Personal Details Account using [Nunjucks](https://github.com/hmrc/play-nunjucks-spike) lib
 
 ## Getting started 
 
-1>  Add [Nunjucks](https://github.com/hmrc/play-nunjucks-spike) library and required webjars in the App dependencies:
+1>  Add [Nunjucks](https://github.com/hmrc/play-nunjucks-spike/releases) library and required webjars in the App dependencies:
 ```sbt
     "uk.gov.hmrc"       %% "play-nunjucks-spike"            % "0.12.0-play-26",
     "org.webjars.npm"   %  "govuk-frontend"                 % "3.1.0",
     "org.webjars.npm"   %  "hmrc-frontend"                  % "1.0.4" 
 ``` 
-2>  Add SASS assets to app/assets/stylesheets. <br/>
+2>  Add SASS assets to app/assets/stylesheets.  
 3>  Configure viewPaths / libPaths in application.conf:
 ```
 nunjucks {
