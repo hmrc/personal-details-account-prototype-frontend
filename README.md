@@ -12,7 +12,7 @@
 ### Getting started
 1>  Add [Twirl](https://github.com/hmrc/play-frontend-govuk/releases) library in the App dependencies. Tested version: 
 ```scala
-"uk.gov.hmrc"       %% "play-frontend-govuk"            % "0.5.0-play-26"
+"uk.gov.hmrc"       %% "play-frontend-govuk"            % "0.13.0-play-26"
 ```
 2>  Add SASS assets to app/assets/stylesheets.  
 3>  Add govuk-frontend routing redirection in app.routes:
